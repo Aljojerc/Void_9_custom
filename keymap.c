@@ -34,7 +34,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
         case CALC:
             if (record->event.pressed)
             {
-                SEND_STRING(SS_DOWN(X_LGUI)  SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(50) "calc" SS_TAP(X_ENTER));
+                SEND_STRING(SS_DOWN(X_LGUI)  SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(100) "calc" SS_TAP(X_ENTER));
             }
             else
             {
@@ -45,21 +45,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             if (record->event.pressed)
             {
                 // Open Microsoft Word via Win+R -> winword
-                SEND_STRING(SS_DOWN(X_LGUI)  SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(50) "winword" SS_TAP(X_ENTER));
+                SEND_STRING(SS_DOWN(X_LGUI)  SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(100) "winword" SS_TAP(X_ENTER));
             }
             return false;
         case PPT:
             if (record->event.pressed)
             {
                 // Open Microsoft PowerPoint via Win+R -> powerpnt
-                SEND_STRING(SS_DOWN(X_LGUI)  SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(50) "powerpnt" SS_TAP(X_ENTER));
+                SEND_STRING(SS_DOWN(X_LGUI)  SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(100) "powerpnt" SS_TAP(X_ENTER));
             }
             return false;
         case EXCEL:
             if (record->event.pressed)
             {
                 // Open Microsoft Excel via Win+R -> excel
-                SEND_STRING(SS_DOWN(X_LGUI)  SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(50) "excel" SS_TAP(X_ENTER));
+                SEND_STRING(SS_DOWN(X_LGUI)  SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(100) "excel" SS_TAP(X_ENTER));
             }
             return false;
         case SOLIDWORKS:
@@ -67,28 +67,28 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             {
                 // Open SolidWorks via Start menu: tap Win, type display name, Enter
                 // More reliable than short command names when application isn't on PATH
-                SEND_STRING(SS_TAP(X_LGUI) SS_DELAY(250) "SolidWorks" SS_DELAY(50) SS_TAP(X_ENTER));
+                SEND_STRING(SS_TAP(X_LGUI) SS_DELAY(150) "SolidWorks" SS_DELAY(100) SS_TAP(X_ENTER));
             }
             return false;
         case VSCODE:
             if (record->event.pressed)
             {
                 // Open VS Code via Win+R -> code (ensure 'code' is on PATH) or use full path
-                SEND_STRING(SS_DOWN(X_LGUI)  SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(50) "code" SS_TAP(X_ENTER));
+                SEND_STRING(SS_DOWN(X_LGUI)  SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(100) "code" SS_TAP(X_ENTER));
             }
             return false;
         case DISCORD:
             if (record->event.pressed)
             {
                 // Open Discord via Start menu: tap Win, type display name, Enter
-                SEND_STRING(SS_TAP(X_LGUI) SS_DELAY(150) "Discord" SS_DELAY(50) SS_TAP(X_ENTER));
+                SEND_STRING(SS_TAP(X_LGUI) SS_DELAY(150) "Discord" SS_DELAY(100) SS_TAP(X_ENTER));
             }
             return false;
         case CHROME:
             if (record->event.pressed)
             {
                 // Open Google Chrome via Win+R -> chrome
-                SEND_STRING(SS_DOWN(X_LGUI)  SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(50) "chrome" SS_TAP(X_ENTER));
+                SEND_STRING(SS_DOWN(X_LGUI)  SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(100) "chrome" SS_TAP(X_ENTER));
             }
             return false;
         case WINSCR:
@@ -102,4 +102,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             return false;
     }
     return true;
+
 }
