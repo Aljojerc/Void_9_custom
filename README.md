@@ -7,4 +7,4 @@ use https://github.com/victorlucachi/void9   for guide on building and additiona
 
 use https://youtu.be/BcXycScePHM?si=BMgMKHpCyyyE70W5  for guide on programing
 
-
+use https://docs.qmk.fm/keycodes  as a reference when making custom macros
