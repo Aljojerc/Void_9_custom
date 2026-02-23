@@ -19,7 +19,7 @@ enum custom_keycodes
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
-    [0] = LAYOUT_ortho_3x3(
+    [0] = LAYOUT_ortho_3x3( // you can out simple macros here directly
         CALC,   SOLIDWORKS,   VSCODE,
         WORD,  PPT, EXCEL,
         DISCORD,   CHROME,   WINSCR
@@ -104,3 +104,4 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
     return true;
 
 }
+
